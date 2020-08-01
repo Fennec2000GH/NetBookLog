@@ -14,6 +14,9 @@
       <Compile Update="Database.cs">
         <DependentUpon>MainWindow.xaml</DependentUpon>
       </Compile>
+      <Compile Update="UploadWindow.cs.xaml.cs">
+        <DependentUpon>UploadWindow.cs.xaml</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +36,17 @@
       <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
         <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Windows.Forms.dll</HintPath>
       </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="db" />
+      <Folder Include="images" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="UploadWindow.cs.xaml">
+        <Generator></Generator>
+      </Page>
     </ItemGroup>
 
 </Project>

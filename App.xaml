@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:NetBookLog"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- String buttonColor = "Blue" -->
     </Application.Resources>
 </Application>
-<!-- StartupUri="MainWindow.xaml"> -->
+

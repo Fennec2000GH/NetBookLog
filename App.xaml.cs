@@ -45,5 +45,14 @@ namespace NetBookLog {
             //     Console.WriteLine(process);
             // } catch (Win32Exception error) { Console.WriteLine(error.StackTrace); }
         }
+        
+        ///<param name="searchText"> Text entered into search bar </param>
+        ///<summary> Searches ebooks by title </summary>
+        /// <returns> None </returns>
+        // private void SearchTitle(object sender, KeyEventArgs e, string searchText) {
+        //     if (sender == ? && e.KeyCode == Keys.Enter) {
+        //         searchText.ToLower() in 
+        //     }
+        // }
     }
 }
