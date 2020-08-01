@@ -1,0 +1,5 @@
+csc -lib:./Dependencies -reference:WindowsBase.dll -reference:System.Windows.dll -reference:System.Windows.Forms.dll -reference:System.Reflection.dll -reference:System.Runtime.dll -reference:System.Runtime.Loader.dll -reference:PresentationFramework.dll -reference:PresentationCore.dll App.xaml.cs
+csc -lib:./Dependencies -reference:WindowsBase.dll -reference:System.Windows.dll -reference:System.Windows.Forms.dll -reference:System.Reflection.dll -reference:System.Runtime.dll -reference:System.Runtime.Loader.dll -reference:PresentationFramework.dll -reference:PresentationCore.dll MainWindow.xaml.cs
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+D:\Users\qcaij\.nuget\packages\
