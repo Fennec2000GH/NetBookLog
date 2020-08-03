@@ -6,26 +6,70 @@
         xmlns:local="clr-namespace:NetBookLog"
         mc:Ignorable="d"
         Title="Upload eBooks"
-        Height="800"
-        Width="400">
+        Height="400"
+        Width="400"
+        Background="PaleVioletRed">
         
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="400"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!-- Open Files Button -->
-        <Button Name="buttonOpenFiles"
-                Click="ButtonOpenFiles_OnClick"
-                Content="Open Files"
-                Width="120"
-                Height="40"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Margin="10 10 10 10"
-                FontFamily="Arial"
-                FontSize="18"
-                FontWeight="DemiBold">
-        </Button>
+        <StackPanel Orientation="Vertical">
+            <!-- Open Files Button -->
+            <Button Name="buttonOpenFiles"
+                    Click="ButtonOpenFiles_OnClick"
+                    ToolTip="Open file system browser to choose eBooks"
+                    Content="Open Files"
+                    Width="120"
+                    Height="40"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"
+                    Margin="10 10 10 10"
+                    Background="DeepSkyBlue"
+                    FontFamily="Arial"
+                    FontSize="18"
+                    FontStretch="Expanded"
+                    FontStyle="Normal"
+                    FontWeight="DemiBold">
+            </Button>
+            <ListBox Name="listBoxSelectedFiles"
+                     Margin="20 10 20 10"
+                     Height="240"
+                     Background="Cornsilk">
+                
+            </ListBox>
+            <DockPanel>
+            <Button Name="buttonAdd"
+                    Click="ButtonAdd_OnClick"
+                    DockPanel.Dock="Left"
+                    Content="Add"
+                    Margin="20 10 5 10"
+                    Width="175"
+                    Height="40"
+                    Background="DeepSkyBlue"
+                    FontFamily="Arial"
+                    FontSize="24"
+                    FontStyle="Normal"
+                    FontStretch="Expanded"
+                    FontWeight="DemiBold">
+            </Button>
+            
+            <Button Name="buttonRemove"
+                    Click="ButtonRemove_OnClick"
+                    DockPanel.Dock="Right"
+                    Content="Remove"
+                    Margin="5 10 20 10"
+                    Width="175"
+                    Height="40"
+                    Background="DeepSkyBlue"
+                    FontFamily="Arial"
+                    FontSize="24"
+                    FontStyle="Normal"
+                    FontStretch="Expanded"
+                    FontWeight="DemiBold">
+            </Button>
+            </DockPanel>
+        </StackPanel>
     </Grid>
 </Window>

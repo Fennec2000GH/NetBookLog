@@ -21,8 +21,8 @@ namespace NetBookLog {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            string ebookDBPath = "./db/ebook.db";
-            
+            this.DataContext = this;
+
         }
 
         public void ButtonAddDocument_onClick(object sender, RoutedEventArgs e) {

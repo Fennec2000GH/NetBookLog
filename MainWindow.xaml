@@ -8,7 +8,8 @@
         mc:Ignorable="d"
         Title="NetBookLog"
         Height="600"
-        Width="1000">
+        Width="1000"
+        Background="PaleVioletRed">
         
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
@@ -23,44 +24,37 @@
         <Button Name="buttonAddDocument"
                 Content="Add Document"
                 Click="ButtonAddDocument_onClick"
-                Width="100"
+                Width="240"
                 Height="100"
+                Margin="20 20 10 10"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                Foreground="Aqua"
+                Background="LightSkyBlue"
                 FontFamily="Arial"
                 FontSize="24"
                 FontStyle="Normal"
                 FontWeight="DemiBold">
         </Button>
         
-
         <!-- Search Bar / Box -->
         <StackPanel Orientation="Horizontal"
                     Height="30"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
+                    Grid.Row="0"
                     Grid.Column="1">
             <Label Content="Search:" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Border BorderBrush="Black"
-                    BorderThickness="1"
-                    CornerRadius="0"
-                    >
-                <TextBlock Width="200" Height="20" VerticalAlignment="Top" TextWrapping="NoWrap">
-                    <TextBlock.Text>
-                        Enter title
-                    </TextBlock.Text>
-                </TextBlock>
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="0" Width="200" Height="20">
+                <TextBox Name="textBoxSearchBar" TextWrapping="NoWrap" Background="Cornsilk">
+                </TextBox>
             </Border>
         </StackPanel>
-        
-        <GridSplitter Width="5" HorizontalAlignment="Stretch" Grid.Row="2"/>
         
         <!-- Recently Opened eBooks -->
         <StackPanel Orientation="Horizontal" Grid.Row="1">
             <Button Content="First"
                     Width="120"
-                    Margin="10 0 10 10"
+                    Margin="20 10 10 5"
                     Background="Aquamarine"
                     FontFamily="Times"
                     FontSize="24"
@@ -69,7 +63,7 @@
             
             <Button Content="Second"
                     Width="120"
-                    Margin="10 0 10 10"
+                    Margin="5 10 5 10"
                     Background="Violet"
                     FontFamily="Times"
                     FontSize="24"
@@ -77,7 +71,7 @@
             </Button>
             
             <Button Width="120"
-                    Margin="10 0 10 10">
+                    Margin="5 10 5 10">
                 <StackPanel>
                     <Image Source="./images/apples.jpg"/>
                 </StackPanel>
@@ -95,7 +89,6 @@
             </Button>
             
         </StackPanel>
-        <Image Source="./images/apples.jpg" Margin="10 10 10 10" Width="120" Grid.Column="1"></Image>
         
         <StackPanel Orientation="Horizontal"
                     Height="30"
@@ -103,10 +96,7 @@
                     HorizontalAlignment="Left"
                     Grid.Row="2"
                     Grid.Column="0">
-            <Border Name="borderForProgressBar"
-                    BorderBrush="Gray"
-                    BorderThickness="5"
-                    CornerRadius="0">
+            <Border Name="borderForProgressBar" BorderBrush="Gray" BorderThickness="5" CornerRadius="0">
                 <ProgressBar Name="progressBarUpload"
                              Minimum="0"
                              Maximum="100"
