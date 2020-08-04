@@ -6,21 +6,21 @@
         xmlns:local="clr-namespace:NetBookLog"
         mc:Ignorable="d"
         Title="Upload eBooks"
+        Focusable="False"
         Height="400"
         Width="400"
+        MinHeight="400"
+        MinWidth="400"
         Background="PaleVioletRed">
-        
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="400"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" CanVerticallyScroll="True" CanHorizontallyScroll="False">
             <!-- Open Files Button -->
             <Button Name="buttonOpenFiles"
                     Click="ButtonOpenFiles_OnClick"
-                    ToolTip="Open file system browser to choose eBooks"
                     Content="Open Files"
+                    ToolTip="Open file system browser to choose eBooks"
+                    Focusable="False"
                     Width="120"
                     Height="40"
                     VerticalAlignment="Top"
@@ -34,42 +34,48 @@
                     FontWeight="DemiBold">
             </Button>
             <ListBox Name="listBoxSelectedFiles"
+                     VerticalContentAlignment="Top"
                      Margin="20 10 20 10"
                      Height="240"
                      Background="Cornsilk">
-                
             </ListBox>
-            <DockPanel>
-            <Button Name="buttonAdd"
-                    Click="ButtonAdd_OnClick"
-                    DockPanel.Dock="Left"
-                    Content="Add"
-                    Margin="20 10 5 10"
-                    Width="175"
-                    Height="40"
-                    Background="DeepSkyBlue"
-                    FontFamily="Arial"
-                    FontSize="24"
-                    FontStyle="Normal"
-                    FontStretch="Expanded"
-                    FontWeight="DemiBold">
-            </Button>
             
-            <Button Name="buttonRemove"
-                    Click="ButtonRemove_OnClick"
-                    DockPanel.Dock="Right"
-                    Content="Remove"
-                    Margin="5 10 20 10"
-                    Width="175"
-                    Height="40"
-                    Background="DeepSkyBlue"
-                    FontFamily="Arial"
-                    FontSize="24"
-                    FontStyle="Normal"
-                    FontStretch="Expanded"
-                    FontWeight="DemiBold">
-            </Button>
-            </DockPanel>
+            <!-- Buttons modifying selected files -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="buttonAdd"
+                        Click="ButtonAdd_OnClick"
+                        Content="Add"
+                        ToolTip="Upload new eBooks"
+                        Focusable="False"
+                        Grid.Column="0"
+                        Margin="20 10 5 10"
+                        Background="DeepSkyBlue"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        FontStyle="Normal"
+                        FontStretch="Expanded"
+                        FontWeight="DemiBold">
+                </Button>
+                
+                <Button Name="buttonRemove"
+                        Click="ButtonRemove_OnClick"
+                        Content="Remove"
+                        ToolTip="Remove selected eBooks from upload"
+                        Focusable="False"
+                        Grid.Column="1"
+                        Margin="5 10 20 10"
+                        Background="DeepSkyBlue"
+                        FontFamily="Arial"
+                        FontSize="24"
+                        FontStyle="Normal"
+                        FontStretch="Expanded"
+                        FontWeight="DemiBold">
+                </Button>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

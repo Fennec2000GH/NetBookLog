@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using NUnit.Framework.Constraints;
 
 namespace NetBookLog {
     /// <summary>
@@ -28,7 +29,7 @@ namespace NetBookLog {
         public void ButtonAddDocument_onClick(object sender, RoutedEventArgs e) {
             UploadWindow uploadWindow = new UploadWindow();
             uploadWindow.InitializeComponent();
-            uploadWindow.Show();
+            uploadWindow.ShowDialog();
         }
     
         

@@ -27,7 +27,6 @@ namespace NetBookLog {
     public partial class App : Application {
         [STAThread]
         private void startup(object sender, StartupEventArgs e) {
-            
             MainWindow mwin = new MainWindow();
             mwin.InitializeComponent();
             // try {
@@ -45,6 +44,7 @@ namespace NetBookLog {
             //     Console.WriteLine(process);
             // } catch (Win32Exception error) { Console.WriteLine(error.StackTrace); }
         }
+        
         
         ///<param name="searchText"> Text entered into search bar </param>
         ///<summary> Searches ebooks by title </summary>
